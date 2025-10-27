@@ -8,7 +8,7 @@ from firebase_admin import credentials, firestore
 import pyrebase
 
 st.set_page_config(page_title="Community Ethanol Dashboard", layout="wide")
-st.title("🌿 Community Ethanol Production Dashboard")
+st.title("🌿 Ethanol Production Community Dashboard")
 
 # # Load the JSON string and parse it
 # firebase_creds = json.loads(st.secrets["firebase_test"]["service_account_json"])
