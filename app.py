@@ -29,7 +29,7 @@ auth = firebase.auth()
 # Load credentials directly (no json.dumps!)
 # Load the actual service account JSON string from secrets
 firebase_creds_json = st.secrets["firebase-test"]["service_account_json"]
-firebase_creds = json.loads(firebase_creds_json.replace("\n", "\\n"))
+firebase_creds = json.loads(firebase_creds_json)
 
 # Initialize Firebase Admin SDK
 if not firebase_admin._apps:
