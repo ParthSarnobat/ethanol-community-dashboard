@@ -3,3 +3,4 @@ firebase-admin
 pandas
 plotly
 pyrebase4
+setuptools
