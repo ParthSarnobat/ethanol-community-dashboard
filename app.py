@@ -19,7 +19,14 @@ st.title("🌿 Ethanol Production Community Dashboard")
 # db = firestore.client()
 
 # Firebase config
-config = st.secrets["firebase-test"]
+# 1. Convert secrets to a standard dictionary
+config = dict(st.secrets["firebase-test"])
+
+# 2. Add the "Safety Net" for Pyrebase
+if "databaseURL" not in config:
+    config["databaseURL"] = f"https://{config['projectId']}-default-rtdb.firebaseio.com"
+
+# 3. Initialize Pyrebase
 firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
 
